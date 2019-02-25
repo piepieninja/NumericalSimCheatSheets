@@ -1,10 +1,10 @@
 \section{Base Conversion}
-\subsubsection*{Decimal to Binary}
+\subsection*{Decimal to Binary}
 For this simply find the place of the largest binary number that (of the form $2^n$)
 that is within the number. Successivley subtract these numbers while keeping track of their
 place to generate the binary number.
 
-\subsubsection*{Binary to Decimal}
+\subsection*{Binary to Decimal}
 For this notice that each place in the decimal number has a
 corresponding power of 2. If the decimal number has a floating
 point then the power is negative counting from zero. This generates a
@@ -13,14 +13,14 @@ $ 2^{n} + \hspace{1mm} ... \hspace{1mm} + 2^2 + 2^1 + 2^{-1} + 2^{-2} + \hspace{
 Where $n$ is the most significant digit and $m$ is the least. The $2^{-1}$ term
 is the beginning of the floating point numbers.
 
-\subsubsection*{Binary to Octal}
+\subsection*{Binary to Octal}
 Simply follow the table:
 $ 000 \rightarrow 0 \hspace{2mm} 001 \rightarrow 1 \hspace{2mm} 002 \rightarrow 2 \hspace{2mm} 003 \rightarrow 3 $
 $ \hspace{2mm} 004 \rightarrow 4 \hspace{2mm} 005 \rightarrow 5 \hspace{2mm} 006 \rightarrow 6 \hspace{2mm} 007 \rightarrow 7 $\\
 
-\subsubsection*{Binary to Hex}
+\subsection*{Binary to Hex}
 This identical to the Octal method, the Hex symbols range from $0$ to $F$ and binary
 from $0000$ to $1111$. Simply count up un binary and there is a simple conversion.
 
-\subsubsection*{One \& Two's Complement}
+\subsection*{One \& Two's Complement}
 % https://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html
