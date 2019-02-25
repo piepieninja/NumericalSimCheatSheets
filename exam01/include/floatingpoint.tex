@@ -1,0 +1,14 @@
+\section{IEEE Floating Points}
+\subsubsection*{Definitions}
+$s = $ signed bit, $c =$ based exponent, $F =$ fraction. The general form
+for this is $(-1)^s \cdot 2^{c - 127} \cdot 1.F$, for both $|s| = 1$\\
+For single precision: $|c| = 8$, $|F| = 23$\\
+For double precision: $|c| = 11$, $|F| = 52$\\
+
+\subsubsection*{Converting to IEEE Format}
+A number will have the form $D_n ... \hspace{1mm} D_1 D_0 . F_0 F_1 \hspace{1mm} ... F_m$,
+to start we need to shift the values left (normalize) so that the number is now
+of the form: $D_n . F_0 F_1 \hspace{1mm} ... F_{m + (n-1)}$.
+
+\subsubsection*{Example}
+TODO
