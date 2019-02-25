@@ -1,0 +1,21 @@
+\section{Loss of Significance}
+
+
+\subsubsection*{Loss of Precision Theorem}
+The general form of the theorem is as follows:\\
+$x$ and $y$ are floating point numbers such that $x > y > 0$,
+the theorem states that given:
+$ 2^{-p} \leq 1 - \frac{y}{x} \leq 2^{-q} $\\
+there are at most $p$ and at least $q$ digits lost in the subtraction $x-y$.\\
+
+practically speaking, we view the equation as: $E(x) = f(x) - g(x)$. If
+we notice this approaches $0$ we have a concern of loss of precision at that point.
+to find that point we typically view the max loss acceptable as $1$, so we set
+the euqation to $\frac{g(x)}{f(x)} = \frac{1}{2}$. We find the $x = z$ values that cause
+the $E(z) > \frac{1}{2}$ and use a Taylor method there and use the normal formula elsewhere.
+We're just avoiding the loss of precision as $x$ approaches $z$.
+
+\subsubsection*{Rationalizing Numerators}
+In some cases we want to rationalize a numerator to avoid a loss of significance.
+The general form form for radicals in a demonitor is:\\
+$\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} + c  \cdot \frac{\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} - c}{\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} - c}   =  \frac{x^n + r -2c}{\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} - c}$\\
