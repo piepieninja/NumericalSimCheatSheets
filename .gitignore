@@ -1,0 +1,8 @@
+*~
+#*#
+*.DS_Store
+*.aux
+exam01/*~
+exam01/#*#
+exam01/*.DS_Store
+exam01/*.aux

@@ -1,0 +1,12 @@
+\section{Runge-Kutta Methods}
+\subsubsection*{RK4}
+This is the 4th order (RK4) Runge-Kutta
+method for the Initial Value Problem (IVP):\\
+$x(t+h) = x(t) \frac{1}{6}( K_1  + 2K_2 + 2K_3 + K_4) $\\
+where the following are values of $K_n$:
+$ K_1 = h f(t,x)    $\\
+$ K_2 = h f(t + \frac{1}{2} h , x + \frac{1}{2} K_1)    $\\
+$ K_3 = h f(t + \frac{1}{2} h , x + \frac{1}{2} K_2)    $\\
+$ K_4 = h f(t + h ,x + K_3)    $\\
+first, the $K_n$ values are calculated in succession. They the $K_n$
+values are filled into the first formula above.
