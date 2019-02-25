@@ -1,1 +1,34 @@
 \section{Taylor, Maclaurin, \& Euler}
+
+\subsection*{Taylor Series}
+The Taylor series is a sum of derivatives of increasing order that equate to a function. The formula for
+the Taylor series of $f(x)$ evaluated at $a$ is:\\
+$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x - a)^n  = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!} (x - a)^2 + \frac{f'''(a)}{3!} (x-a)^3 $\\
+
+\subsection*{Taylor's Method for ODEs}
+This method takes advantage of the previously mentioned series. here this is some
+step size $h$ that we take from some $f(x)$ value. This is the Initial Value Problem (IVP).\\
+$f(x + h) = f(x) + f'(x)h + \frac{1}{2!}f''(x)h^2 + \frac{1}{3!}f'''(x)h^3 + \hspace{2mm} ...$\\
+
+
+\subsection*{Maclaurin Series}
+The Maclaurin series is just the Taylor series at the special case where $x=0$.
+This gives the following:\\
+$f(x) = f(0) + f'(0) + \frac{x^2}{2!}f'''(0) + \frac{x^3}{3!}f'''(0) + \frac{x^4}{4!}f''''(0) + \hspace{2mm} ... = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$\\
+
+\subsection*{Euler's Method for ODEs}
+This method is just a Taylor series of order $1$ with the same step term $h$,
+though many steps can be taken:\\
+$ f(x + h) = f(x) + f'(x)h $\\
+
+\subsection*{Error Terms}
+We note that Taylor's theorem in terms of $x+h$ is:\\
+$ f(x+h) = \sum_{k=0}^{n} \frac{f^{k}(x)}{k!}h^k + E_{n+1} $\\
+Thus, error terms are of the form:\\
+$ E_{n+1} = \frac{f^{n+1}(\xi)}{(n+1)!}h^{n+1}$\\
+
+It pays off to look at the term more specifically for the problem. A lot of times the
+error term takes the form $\frac{n^2}{n!}$ or $\frac{n^2}{n}$.
+
+It is important to note that we only care about the $0.5 \cdot 10^n$ if our desired
+accuracy is to the $n$th decimal. Thus we set $E_{n+1} < 0.5 \cdot 10^n$

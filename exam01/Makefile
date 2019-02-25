@@ -7,3 +7,6 @@ clean:
 	# rm -f *.pdf
 	rm -f *.out
 	rm -f include/*.aux
+	rm -f ../*~
+	rm -f ../.DS_Store
+	rm -f .DS_Store
