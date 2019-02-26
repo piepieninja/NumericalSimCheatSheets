@@ -1,10 +1,11 @@
 \section{Generally Useful Maths}
 \subsection*{Trig Properties}
-$\sin^2x + \cos^2x = 1 \hspace{5mm} \frac{d}{dx}\sin x= \cos x$\\
-$\tan x = \frac{\sin x}{\cos x} \hspace{5mm} \frac{d}{dx}\cos x= - \sin x$\\
+$\sin^2x + \cos^2x = 1 \hspace{3mm} \sec x = \frac{1}{\cos x}$\\
+$\tan x = \frac{\sin x}{\cos x} \hspace{5mm} \csc x = \frac{1}{\sin x}$\\
+$\frac{d}{dx}\sin x= \cos x \hspace{3mm} \frac{d}{dx}\cos x= - \sin x$\\
 $\frac{d}{dx}\tan x = \sec^2 x \hspace{5mm} \frac{d}{dx}\cot x = - \csc^2 x$\\
 $\frac{d}{dx} \arcsin x = \frac{1}{\sqrt{1 - x^2}}  \hspace{2mm}   \frac{d}{dx} \arccos x = \frac{-1}{\sqrt{1 - x^2}}  $\\
-$\frac{d}{dx} \arctan x = \frac{1}{1 + x^2}      $\\
+$\frac{d}{dx} \arctan x = \frac{1}{1 + x^2} \hspace{2mm} \frac{d}{dx} \sec x = \sec x \tan x $\\
 
 \subsection*{Log \& Exp Properties}
 $\frac{x}{dx} b^x = b^x \ln x \hspace{5mm} \log(\frac{1}{x}) = - \log x$\\
@@ -15,6 +16,10 @@ $\log_a x^n = n \log_a x \hspace{5mm} \frac{e^{-n x}}{e^x} = e^{-(n+1)x}    $\\
 $\log_a (\frac{x}{y}) = \log_a x - \log_a y \hspace{2mm}  $\\
 $\log_a (xy) = \log_a x + \log_a y \hspace{2mm}  $\\
 
+\subsection*{Other Derivative Rules}
+$\frac{d}{dx} f(g(x)) = f'(g(x))g(x) \hspace{1mm}$\\
+$\frac{d}{dx} f/g = \frac{(f'g - g'f)}{g^2}$\\
+
 \subsection*{Useful Series}
 $r^0 + r^1 + r^2 + r^3 = \frac{r^n - 1}{r - 1}$\\
 for an alternating series the following will work to start:\\
@@ -23,6 +28,8 @@ $ \sum_{n=0}^{\infty} (-1)^n $ or $ \sum_{n=0}^{\infty} (-1)^{n+1} $\\
 \subsection*{In Class Terminology}
 the relative error formula:
 $ \frac{|x - \hat{x}|}{x} $\\
+more generally, with $\hat{x},\hat{y}$ being rounded terms we get relative error as:\\
+$\frac{(x-y) - (\hat{x}-\hat{y})}{(x-y)} = relative \hspace{2mm} error$\\
 these were represed strangely in class:\\
 $ x' = f(t,x)  \hspace{3mm} x(2) = 1 \rightarrow t = 2, x=1 $\\
 If $x'' =  xx'$ then $x''' = xx'' + x'x'$\\

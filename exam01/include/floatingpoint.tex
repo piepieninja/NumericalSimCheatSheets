@@ -4,6 +4,11 @@ $s = $ signed bit, $c =$ based exponent, $F =$ fraction. The general form
 for this is $(-1)^s \cdot 2^{c - 127} \cdot 1.F$, for both $|s| = 1$\\
 For single precision: $|c| = 8$, $|F| = 23$\\
 For double precision: $|c| = 11$, $|F| = 52$\\
+\textbf{Machine Numbers} are numbers which can be represted perfectly (no error)
+in an IEEE floating point format.\\
+$\epsilon_{single} = 2^{-23}$ and $\epsilon_{double} = 2^{-52}$, floating points have
+about 6 digits of accuracy because $2^{-23} \approx 1.19 \cdot 10^{-7}$ and double
+has about 15 digits of accuracy becase $2^{-52} \approx 2.22 \cdot 10^{-16}$
 
 \subsection*{IEEE Format}
 recall the above formula:\\
@@ -12,6 +17,7 @@ A number will have the form $D_n ... \hspace{1mm} D_1 D_0 . F_0 F_1 \hspace{1mm}
 to start we need to shift the values left (normalize) so that the number is now
 of the form: $D_n . F_0 F_1 \hspace{1mm} ... F_{m + (n-1)} \cdot 10^{n-1}$.
 note that the $c$ term is, by definition, solved from $2^{c - 127} = 2^{n-1}$.
+
 
 % \subsection*{Example}
 % Converting the number $-42.125$ to binary floating point with single precision:\\

@@ -19,3 +19,9 @@ We're just avoiding the loss of precision as $x \rightarrow z$.
 In some cases we want to rationalize a numerator to avoid a loss of significance.
 The general form form for radicals in a demonitor is:\\
 $\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} + c  \cdot \frac{\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} - c}{\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} - c}   =  \frac{x^n + r -2c}{\sqrt[\leftroot{-2}\uproot{2}k]{x^n + r} - c}$\\
+
+\subsection*{Small Numbers}
+If a set of small numbers $\{s_0, s_1, ... , s_i\}$ is each on the order of $10^{n+1}$ decimal places but
+a large large number $l$ is on the order of $10^{n}$ decimal places, it is better
+to add $\sum_{k=0}^{i} s_k$ small numbers there are before
+adding an $l$ large number.
