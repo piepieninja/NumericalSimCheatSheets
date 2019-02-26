@@ -26,6 +26,11 @@ This method is just a Taylor series of order $1$ with the same step term $h$,
 though many steps can be taken:\\
 $ f(x + h) = f(x) + f'(x)h $\\
 
+\subsection*{Modified Euler's Method}
+This is the equation:\\
+$x_{n+1} = x_n +h \frac{f(t_n,x_n) + f(t_{n+1},x_{n+1})}{2}$\\
+$= x_n = \frac{h}{2}[ x'_{n} + x'_{n+1} ]$\\
+
 \subsection*{Error Terms}
 We note that Taylor's theorem in terms of $x+h$ is:\\
 $ f(x+h) = \sum_{k=0}^{n} \frac{f^{k}(x)}{k!}h^k + E_{n+1} $\\
