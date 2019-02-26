@@ -28,11 +28,10 @@ Thus, error terms are of the form:\\
 $ E_{n+1} = \frac{f^{n+1}(\xi)}{(n+1)!}h^{n+1}$\\
 
 It pays off to look at the term more specifically for the problem. A lot of times the
-error term takes the form $\frac{n^2}{n!}$ or $\frac{n^2}{n}$.
+error term takes the form $\frac{(n+1)^2}{(n+1)!}$ or $\frac{(n+1)^2}{(n+1)}$.
 
 It is important to note that we only care about the $0.5 \cdot 10^n$ if our desired
-accuracy is to the $n$th decimal. Thus we set $E_{n+1} < 0.5 \cdot 10^n$
+accuracy is to the $n$th decimal. Thus we set $E_{n+1} < 0.5 \cdot 10^n$ the $n+1$
+portion of this is \textbf{very important!} To reiterate:
 
-\subsection*{Accuracy to Postition Example}
-Imagine that we have an error term it will be of the following form:\\
-$ E_{n+1} = \frac{f^{n+1}(\xi)}{(n+1)!}h^{n+1} $ Let $E_{n+1} = \frac{x^{n+1}}{n!}$\\
+$ E_{n+1} = \frac{f^{n+1}(\xi)}{(n+1)!}h^{n+1} $ or $E_{n+1} = \frac{x^{n+1}}{(n+1)!}$\\

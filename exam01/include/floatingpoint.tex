@@ -5,17 +5,20 @@ for this is $(-1)^s \cdot 2^{c - 127} \cdot 1.F$, for both $|s| = 1$\\
 For single precision: $|c| = 8$, $|F| = 23$\\
 For double precision: $|c| = 11$, $|F| = 52$\\
 
-\subsection*{Converting to IEEE Format}
+\subsection*{IEEE Format}
+recall the above formula:\\
+$(-1)^s \cdot 2^{c - 127} \cdot 1.F$\\
 A number will have the form $D_n ... \hspace{1mm} D_1 D_0 . F_0 F_1 \hspace{1mm} ... F_m$,
 to start we need to shift the values left (normalize) so that the number is now
 of the form: $D_n . F_0 F_1 \hspace{1mm} ... F_{m + (n-1)} \cdot 10^{n-1}$.
+note that the $c$ term is, by definition, solved from $2^{c - 127} = 2^{n-1}$.
 
-\subsection*{Example}
-Converting the number $-42.125$ to binary floating point with single precision:\\
-$0.125 \cdot 2 = [0].25 \rightarrow 0.25 \cdot 2 = [0].5 \rightarrow 0.5 \cdot 2 = [1].0$
-Thus the fractional part is: $0.001$, the nonfractional part is:\\
-$\frac{1}{32} \hspace{1mm} \frac{0}{16} \hspace{1mm} \frac{1}{8} \hspace{1mm} \frac{0}{4} \hspace{1mm} \frac{1}{2} \hspace{1mm} \frac{0}{1} \rightarrow 101010$\\
-The full value, $101010.001$, when normaized is: $1.01010001 \cdot 10^5$. We find the $c$
-term with $2^{c - 127} = 2^5 \rightarrow c = 132$ and we already have $F = .01010001$
-This gives us the following number with single precision:\\
-$[1][10000100][01010001 ... b_{23}]$\\
+% \subsection*{Example}
+% Converting the number $-42.125$ to binary floating point with single precision:\\
+% $0.125 \cdot 2 = [0].25 \rightarrow 0.25 \cdot 2 = [0].5 \rightarrow 0.5 \cdot 2 = [1].0$
+% Thus the fractional part is: $0.001$, the nonfractional part is:\\
+% $\frac{1}{32} \hspace{1mm} \frac{0}{16} \hspace{1mm} \frac{1}{8} \hspace{1mm} \frac{0}{4} \hspace{1mm} \frac{1}{2} \hspace{1mm} \frac{0}{1} \rightarrow 101010$\\
+% The full value, $101010.001$, when normaized is: $1.01010001 \cdot 10^5$. We find the $c$
+% term with $2^{c - 127} = 2^5 \rightarrow c = 132$ and we already have $F = .01010001$
+% This gives us the following number with single precision:\\
+% $[1][10000100][01010001 ... b_{23}]$\\
