@@ -66,8 +66,12 @@ Note that before $Ax = b$ and we also have $A = LU$, thus $LUx = b$. With a
 substitution we get $Ux = y$, so $Ly = b$.
 
 \subsection*{LU Decomposition Inverse Formula}
+This is similar to normal $LU$ decomposition. The formula takes the form of
+$AX = I$ where all matrices are n by n, so $X = [ x_1 | x_2 | ... | x_n ]$ with
+the standard identity $I = [I_1 | I_2 | ... | I_n] $.
 
-% TODO fill this in
+\subsection*{Gaussian Inverse Formula}
+The gaussian inverse does the following: $[A | I] \rightarrow [I | A^{-1}]$
 
 \subsection*{Cholesky Factorization Formulas}
 This is similar to LU decomposition, only $U = L^T$. So: $A = L L^T$ which means
@@ -86,7 +90,7 @@ L^T =
   0 & 0 & l_{33} \\
 \end{bmatrix},
 \]
-
+\vspace{42mm}
 \[
 A =
 \begin{bmatrix}
@@ -106,3 +110,25 @@ L =
 \]
 
 But the actual Cholesky factorization is just the matrix $L$.
+
+\subsection*{Gaussian Elimination Formulas}
+Gassian elimination is an $Ax = b$ solving method. It makes an upper triangual matrix
+with the form: $[A | b] $
+\newline
+% \vspace{130mm}
+\\~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% yee

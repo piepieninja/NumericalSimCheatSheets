@@ -4,8 +4,12 @@
 Similar to finite methods.
 The general system is a BVP set up as:
 $ x'' = F(t, x, x')$ with boundary values $x(a) = \alpha$ and $x(b) = \beta$.
-Here we may also have a first derivative formula for terminal values at $b$ in
-the form $x(b) = \beta = \phi(z)$. $z$ values will be of an IVP form $x'(a) = z_{IVP}$
+Here we may also have formulas for hypothesized terminal values at $b$ in
+the form $x(b) \approx \beta \approx \phi(z)$. $z$ values will be of an IVP form $x'(a) = z_{IVP}$
+\newline
+The error formula for $\phi(z)$ is given by: $\epsilon = | \phi(z) - \beta |$
+\newline
+\newline
 \subsection*{Iterative z formulas}
 The general form iterative z formula is as follows:
 \[
