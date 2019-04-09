@@ -1,0 +1,108 @@
+\section{Linear Algebra Overview}
+
+\subsection*{LU Decomposition Formulas}
+Here $A = LU$, this would look like the following:
+\[
+A = LU, \hspace{5mm}
+A =
+\begin{bmatrix}
+  a_{11} & a_{12} & a_{13} \\
+  a_{21} & a_{22} & a_{23} \\
+  a_{31} & a_{32} & a_{33} \\
+\end{bmatrix}
+\]
+\[
+L =
+\begin{bmatrix}
+  l_{11} & 0 & 0 \\
+  l_{21} & l_{22} & 0 \\
+  l_{31} & l_{32} & l_{33} \\
+\end{bmatrix},
+U =
+\begin{bmatrix}
+  u_{11} & u_{12} & u_{13} \\
+  0 & u_{22} & u_{23} \\
+  0 & 0 & u_{33} \\
+\end{bmatrix}
+\]
+to make this fit on the cheatsheet I have broken $A$ into several vectors,
+$A = [ a_1 | a_2 | a_3 ]$, so these parts of $A$ are:
+\newline
+$$
+a_1 =
+\begin{bmatrix}
+l_{11} \\
+l_{21} \\
+l_{31}
+\end{bmatrix}
+, \hspace{3mm}
+a_2 =
+\begin{bmatrix}
+  l_{11} u_{12} \\
+  l_{21} u_{12} + l_{22} u_{22} \\
+  l_{31} u_{12} + l_{32} u_{22}
+\end{bmatrix}
+$$
+$$
+a_3 =
+\begin{bmatrix}
+  l_{11} u_{13} \\
+  l_{21} u_{13} + l_{22} u_{23} \\
+  l_{31} u_{13} + l_{32} u_{23} + l_{33} u_{33}
+\end{bmatrix}
+$$
+
+% \[
+% A =
+% \begin{bmatrix}
+%   l_{11} u_{11} & l_{11} u_{12} & l_{11} u_{13} \\
+%   l_{21} u_{11} & l_{21} u_{12} + l_{22} u_{22} & l_{21} u_{13} + l_{22} u_{23} \\
+%   l_{31} u_{11} & l_{31} u_{12} + l_{32} u_{22} & l_{31} u_{13} + l_{32} u_{23} + l_{33} u_{33}
+% \end{bmatrix}
+% \]
+
+\subsection*{Ax = b, LU Decomposition Formulas}
+Note that before $Ax = b$ and we also have $A = LU$, thus $LUx = b$. With a
+substitution we get $Ux = y$, so $Ly = b$.
+
+\subsection*{LU Decomposition Inverse Formula}
+
+% TODO fill this in
+
+\subsection*{Cholesky Factorization Formulas}
+This is similar to LU decomposition, only $U = L^T$. So: $A = L L^T$ which means
+that:
+\[
+L =
+\begin{bmatrix}
+  l_{11} & 0 & 0 \\
+  l_{21} & l_{22} & 0 \\
+  l_{31} & l_{32} & l_{33} \\
+\end{bmatrix},
+L^T =
+\begin{bmatrix}
+  l_{11} & l_{21} & l_{31} \\
+  0 & l_{22} & l_{32} \\
+  0 & 0 & l_{33} \\
+\end{bmatrix},
+\]
+
+\[
+A =
+\begin{bmatrix}
+  l_{11}^2 & l_{11}l_{21} & l_{11}l_{31} \\
+  l_{21}l_{11} & l_{21}^2 + l_{22}^2 & l_{21}l_{31} + l_{22}l_{32}\\
+  l_{31}l_{11} & l_{31}l_{21} + l_{32}l_{22} & l_{31}^2 + l_{32}^2 + l_{33}^2
+\end{bmatrix}
+\]
+Then solving for the system and getting a cleaner $L$ at the end gives the formula:
+\[
+L =
+\begin{bmatrix}
+\sqrt{a_{11}} & 0 & 0 \\
+\frac{a_{21}}{l_{11}} & \sqrt{a_{22} - l_{21}^2} & 0 \\
+\frac{a_{31}}{l_{11}} & \frac{a_{32} - l_{31}l_{21}}{l_{22}} & \sqrt{A_{33} - l_{31}^2 - l_{32}^2}
+\end{bmatrix}
+\]
+
+But the actual Cholesky factorization is just the matrix $L$.

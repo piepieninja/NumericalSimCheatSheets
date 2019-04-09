@@ -1,0 +1,54 @@
+\section{Finite Difference Methods}
+
+\subsection*{General System Formulas}
+The general system is a BVP set up as:
+$ x'' = F(t, x, x')$ with boundary values $x(a) = \alpha$ and $x(b) = \beta$.
+Here $t = a + ih$ and $h = \frac{b - a}{n}$ where $(0 \leq i \leq n)$
+\subsection*{Central Difference Formulas}
+For the frist derivative the formula is:
+\[
+x'(t) = \frac{x(t+h) - x(t-h)}{2h}
+\]
+\[
+\rightarrow x'_{i} = \frac{x_{i+1} - x_{i-1}}{2h}
+\]
+For the second derivative the formula is:
+\[
+x''(t) = \frac{x(t+h) - 2 x(t) + x(t-h)}{h^2}
+\]
+\[
+\rightarrow x''_{i} = \frac{x_{i+1} - 2 x_i + x_{i-1}}{h^2}
+\]
+\subsection*{Matrix Formulas}
+The formulas also take a matrix form in a linear system $A x = b$.
+The pricipal equation of the system is found in the form:
+\newline
+$a_i x_{i-1} + d_i x_{i} + c_i x_{i+1} = b_i$
+\newline
+In $Ax = b$ form this looks like:
+\[
+A =
+\begin{bmatrix}
+  d_1 & c_1 & &  \\
+  a_2 & d_2 & c_2 &  \\
+  & & \ddots &  \\
+  & &  a_n & d_n
+\end{bmatrix}
+\]
+\[
+x =
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}
+, \hspace{3mm}
+b =
+\begin{bmatrix}
+b_1 - a_1 \alpha \\
+b_2 \\
+\vdots \\
+b_n - c_n \beta
+\end{bmatrix}
+\]
