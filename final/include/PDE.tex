@@ -3,11 +3,29 @@ Solved like BVPs.
 \subsection*{Classification Formulas}
 Discriminant gives classification:\\ $B^2 - 4 A C$, with form:\\
 $ A \frac{\partial^2 u}{\partial x^2} + B \frac{\partial^2 u}{\partial x \partial t} + C \frac{\partial^2 u}{\partial t^2} + D \frac{\partial u}{\partial x} + E \frac{\partial u}{\partial t} + F u = G$\\
-$B^2 - 4 A C = 0 $, Parabolic\\
-$B^2 - 4 A C > 0 $, Hyperbolic\\
-$B^2 - 4 A C < 0 $, Elliptic\\ 
+$B^2 - 4 A C = 0 $, Parabolic, $u_t = u_{xx}$\\
+$B^2 - 4 A C > 0 $, Hyperbolic, $u_{tt} = u_{xx}$\\
+$B^2 - 4 A C < 0 $, Elliptic, $u_{xx} + u_{yy} = 0$\\
 
 \subsection*{Crank-Nicholson}
+The PDE will be given in form: $u_t = u_{xx}$, with some range $\alpha_x < x < \beta_x $ and time
+constraint $t > \gamma_t$. Boundaries will be of the form: $u(x_0,t_0) = \alpha$, $u(x_n,t_n) = \beta$
+with some constraint $t > \gamma_t$ and $u(x, t_0) = f(x)$ with some constraint $a_x \leq x \leq b_x$\\
+
+remember, equations are of form $u(x,t)$\\
+
+Note, the forms in the descrete case take $x_0^0, x_1^0, x_2^0, ... x_i^j$ where j is time and x is the function.\\
+
+this gives the equations $x_0^0 = u(x_0,t_0)$ and $x_0$ terms use the equation and form $u(x, t_0) = u(x_{x_0 + \Delta x}^0) = f(x)$\\
+
+steps are $\Delta t$ and $\Delta x$, the general form of the problem uses the equation $s= \frac{\Delta x^2}{\Delta t}$.\\
+
+The matrix form of the problem has the following equation form:\\
+
+$u_{i+...}^{j+1} + ... = u_{i+...}^{j} + D$\\
+such that\\
+$\alpha (u_{i-1}^{j+1}) + \beta (u_{i}^{j+1}) + \gamma (u_{i+1}^{j+1}) = b_i^{j} + D$
 
 
-the general form of the problem uses the equation $s= \frac{\Delta x^2}{\Delta t}$.
+
+$\vspace{250mm}$
