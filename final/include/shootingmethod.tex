@@ -1,0 +1,21 @@
+\section{Shooting Method Formulas}
+
+\subsection*{General System Formulas}
+Similar to finite methods.
+The general system is a BVP set up as:
+$ x'' = F(t, x, x')$ with boundary values $x(a) = \alpha$ and $x(b) = \beta$.
+Here we may also have formulas for hypothesized terminal values at $b$ in
+the form $x(b) \approx \beta \approx \phi(z)$. $z$ values will be of an IVP form $x'(a) = z_{IVP}$
+\newline
+The error formula for $\phi(z)$ is given by: $\epsilon = | \phi(z) - \beta |$
+\newline
+\newline
+\subsection*{Iterative z formulas}
+The general form iterative z formula is as follows:
+\[
+z_{n+1} = z_n + \frac{\beta - \phi(z_n)}{\phi(z_n) - \phi(z_{n-1})}(z_n - z_{n-1})
+\]
+In the simple form the formula is:
+\[
+z_3 = z_2 + \frac{\beta - \phi(z_2)}{\phi(z_n) - \phi(z_1)}(z_2 - z_1)
+\]

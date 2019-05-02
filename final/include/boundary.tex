@@ -1,0 +1,15 @@
+\section{Boundary Value Problems}
+Can be descretized with finite difference methods.
+The formula goes from $t_0$, $\Delta t$, ... , $t_n$.
+The fromulas for the known boundary values are of the
+form: $x(t_0) = \alpha$ and $x(t_n) = \beta$.
+
+\subsection*{Jacobi Method}
+Solves $Ax = b$. Solve the system of equations by guessing at $x_n$ valeus.
+starts with initial guess $x = [0 \hspace{1mm} 0 \hspace{1mm} 0]^T$,
+converges on an answer after iteration. Uses the formula:\\
+$x_i^{(k+1)} = \frac{1}{a_{ii}}(b_i - \sum_{j \neq i} a_{ij} x_j^{(k)})$, $i = 1, ..., n$.
+
+\subsection*{Gauss-Seidel Method}
+Just like Jacobi, only it substitutions during iteration. Uses formula:
+$x_i^{(k+1)} = \frac{1}{a_{ii}}(b_i - \sum_{j}^{i-1} a_{ij} x_j^{(k+1)} - \sum_{j=i+1}^n a_{ij} x_j^{(k)} )$
